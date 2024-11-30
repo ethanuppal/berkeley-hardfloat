@@ -7,7 +7,6 @@ def main():
     if len(sys.argv) != 2:
         print(f"Usage: {sys.argv[0]} <patch_directory>")
         sys.exit(1)
-
     directory = sys.argv[1]
     for filename in sorted(os.listdir(directory)):
         if filename.endswith(".patch"):
