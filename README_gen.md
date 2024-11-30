@@ -1,4 +1,4 @@
-# berkeley-hardfloat (stable-{{VERSION_TAG}})
+# berkeley-hardfloat patches (stable-{{VERSION_TAG}})
 
 This repository is a slightly modified version of UC Berkeley's [Hardfloat](https://github.com/ucb-bar/berkeley-hardfloat) library.
 All modifications can be found in patches under [`patches/`](./patches/),
@@ -6,6 +6,15 @@ applied in lexicographical order.
 It's the version that powers the [Spade hardfloat library](https://github.com/ethanuppal/hardfloat-spade).
 
 ## Usage
+
+Head over to the [Releases](https://github.com/ethanuppal/berkeley-hardfloat/releases) page and download one of the `.zip` files.
+For example, you can get `v0.1.0` by running
+
+```shell
+wget https://github.com/ethanuppal/berkeley-hardfloat/archive/refs/tags/v0.1.0.zip
+```
+
+## Local Development
 
 First, clone the repository:
 
