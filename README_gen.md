@@ -1,4 +1,4 @@
-# berkeley-hardfloat (stable-{{VERSION_TAG}})
+# berkeley-hardfloat patches (stable-{{VERSION_TAG}})
 
 This repository is a slightly modified version of UC Berkeley's [Hardfloat](https://github.com/ucb-bar/berkeley-hardfloat) library.
 All modifications can be found in patches under [`patches/`](./patches/),
