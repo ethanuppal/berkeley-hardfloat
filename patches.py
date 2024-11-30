@@ -1,6 +1,8 @@
 import os
 import sys
 import subprocess
+import requests
+import re
 
 
 def main():
@@ -28,9 +30,10 @@ def main():
     README_PATH = "README.md"
     README_GEN_PATH = "README_gen.md"
 
-    # VERSION_TAG = requests.get(
-    #     "https://api.github.com/repos/ethanuppal/berkeley-hardfloat/releases/latest"
-    # ).json()["name"]
+    release_html = requests.get(
+        "https://github.com/ethanuppal/berkeley-hardfloat/releases"
+    ).text
+    VERSION_TAG = re.search(r"<a\s+[^>]*>Release\s+([^<]+)</a>", release_html).group(1)
 
     with open(README_GEN_PATH, "r") as f:
         readme = {"content": f.read()}
@@ -38,7 +41,7 @@ def main():
         def put(var, text):
             readme["content"] = readme["content"].replace("{{" + var + "}}", text)
 
-        # put("VERSION", VERSION_TAG)
+        put("VERSION_TAG", VERSION_TAG)
         put("CHANGELOG", "\n".join(changelog))
 
         with open(README_PATH, "w") as f:
