@@ -36,7 +36,7 @@ The Verilog downloaded by `build.sh` has certain compilation issues fixed by thi
 
 _This changelog is automatically generated._
 
-### 1. Icarus fix
+### 1. Icarus fix (see [changes](./patches/1-icarus-fix.patch))
 
 This patch fixes an issue with Icarus Verilog:
 ```

@@ -18,7 +18,12 @@ def main():
             with open(patch_path, "r") as f:
                 parts = filename.rsplit(".")[0].split("-")
                 name = " ".join(parts[1:]).capitalize()
-                changelog.extend([f"### {parts[0]}. {name}", ""])
+                changelog.extend(
+                    [
+                        f"### {parts[0]}. {name} (see [changes](./patches/{filename}))",
+                        "",
+                    ]
+                )
                 changelog.extend(
                     [line[2:].strip() for line in f if line.startswith("#! ")]
                 )
